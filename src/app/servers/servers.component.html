@@ -19,6 +19,8 @@
 <!-- <p [innerText]="allowNewServer"></p> -->
 <!-- <p>{{serverCreationStatus}}</p> -->
 <!-- * because structural directive really changing the DOM  -->
-<p *ngIf="serverCreated">Server was created, server name is {{serverName}}</p>
-<app-server></app-server>
-<app-server></app-server>
+<p *ngIf="serverCreated">Server was created,
+   server name is {{serverName}}</p>
+<!-- # is local reference -->
+
+<app-server *ngFor="let server of servers"></app-server>
